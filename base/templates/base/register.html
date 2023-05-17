@@ -1,11 +1,14 @@
 {% extends 'base/main.html' %}
 {% block content %}
 
-<div class="header-bar">
-    <h1>Register</h1>
+<div class="headers-bar">
+    <h1>Task List</h1>
+    
+
 </div>
 
 <div class="card-body">
+    <h2>Create your account</h2>
     <form method="POST">
         {% csrf_token %}
         <label>{{form.username.label}}</label>
@@ -20,11 +23,13 @@
 
         <label>{{form.password2.label}}</label>
         {{form.password2}}
-        <input style="margin-top: 10px;" class="button" type='submit' value='Register'>
+        <input style="margin-top: 10px;" class="button center" type='submit' value='Register'>
     
     </form>
 
-    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    <div class="register-container">
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
 
 </div>
 
