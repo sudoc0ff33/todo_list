@@ -4,20 +4,42 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>To Do List</title>
+        <title>Task List</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
 
         <style>
-            body{
+            body {
                 background-color: #fff;
                 font-family: 'Times New Roman', Times, serif;
-                padding-top: 50px;
-
-            }
+                padding-top: 0px;
+              }
+              
+              /* Responsive styles for different screen sizes */
+              /* Adjust these media queries and styles as per your app's design requirements */
+              
+              /* Small devices (e.g., smartphones) */
+              @media only screen and (max-width: 767px) {
+                /* Adjust the styles for small devices */
+                /* For example, reduce font sizes, adjust margins/paddings, etc. */
+              }
+              
+              /* Medium devices (e.g., tablets) */
+              @media only screen and (min-width: 768px) and (max-width: 1023px) {
+                /* Adjust the styles for medium devices */
+                /* For example, change the layout, adjust column widths, etc. */
+              }
+              
+              /* Large devices (e.g., desktops) */
+              @media only screen and (min-width: 1024px) {
+                /* Adjust the styles for large devices */
+                /* For example, increase font sizes, adjust container widths, etc. */
+              }
+              
 
 
             h1,
@@ -55,7 +77,37 @@
                 padding: 20px;
                 border-radius: 10px 10px 0 0;
                 background: linear-gradient(90deg, #11101D, #11101D, 43%, #11101D 100%);
+
+            }      
+
+            .logout-button {
+                display: inline-block;
+                background-color: #f44336;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 4px;
             }
+            
+            .logout-button:hover {
+                background-color: #d32f2f;
+            }
+            .logout-container {
+                display: flex;
+                align-items: center;
+              }
+              
+              .logout-container .logout-button {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                text-decoration: none;
+              }
+              
+              .logout-container .logout-icon {
+                margin-right: 5px;
+              }
+            
 
             .header-bar {
                 display: flex;
@@ -166,12 +218,65 @@
             
 
             .card-body {
-                  
+              
                 padding: 30px;
                 color: #11101D;
                 Times New Roman', Times, serif;     
                
             }
+            
+            {% comment %} .card-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                }
+
+                .card-body h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+                }
+
+                .card-body form {
+                display: flex;
+                flex-direction: column;
+                align-items: ;
+                width: 300px;
+                }
+
+                .card-body label {
+                font-weight: bold;
+                }
+
+                .card-body input[type="text"],
+                .card-body input[type="password"] {
+                padding: 10px;
+                margin-bottom: 10px;
+                width: 100%;
+                }
+
+                .card-body input[type="submit"] {
+                padding: 10px 20px;
+                background-color: #337ab7;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                } {% endcomment %}
+
+                .card-body input[type="text"],
+                .card-body input[type="password"] {
+                padding: 10px;
+                margin-bottom: 5px;
+                width: 97%;
+                }
+                .card-body label {
+                    font-weight: bold;
+                    margin-bottom: 6px;
+                    }
+                .card-body input[type="submit"]:hover {
+                background-color: #212033;
+                }
             .button.center {
                 display: block;
                 margin: 0 auto;
