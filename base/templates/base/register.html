@@ -11,6 +11,9 @@
     <h2>Create your account</h2>
     <form method="POST">
         {% csrf_token %}
+        {{form.as_p}}
+        <input class="button center" type='submit' value='Register'>
+        {% comment %} {% csrf_token %}
         <label>{{form.username.label}}</label>
         {{form.username}}
 
@@ -21,9 +24,10 @@
 
         <P></P>
 
+
         <label>{{form.password2.label}}</label>
         {{form.password2}}
-        <input style="margin-top: 10px;" class="button center" type='submit' value='Register'>
+        <input style="margin-top: 10px;" class="button center" type='submit' value='Register'> {% endcomment %}
     
     </form>
 
